@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+.cabecalho {
+    background-color: var(--braco-principal);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+    position: relative;
+}
+
+.cabecalho__menu-hamburguer {
+    width: 24px;
+    height: 24px;
+    background-image: url(../assets/Menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    padding: 1em 0 1em 1em;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 70vw;
+    background-color: var(--branco);
+    z-index: 2;
+}
+
+.container__botao:checked ~ .lista-menu {
+    display : block;
+}
+
+.lista-menu__titulo,
+.lista-menu__item {
+    padding: 1em;
+    background-color: var(--braco-principal);
+}
+
+.lista-menu__titulo {
+    font-weight: bold;
+    font-family: var(--font-p);
+    color: var(--laranja);
+}
+
+.lista-menu__link {
+    font-family: var(--font-p);
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-decoration: none;
+    background-color: linear;
+    text-transform: uppercase;
+}
+
+.container__botao {
+    display: none;
+}

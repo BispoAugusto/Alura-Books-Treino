@@ -1,0 +1,24 @@
+.carousel__titulo {
+    background-color: var(--branco);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--laranja);
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1em 0;
+}
+
+.swiper-slide img {
+    width: 100%;
+    box-shadow: 2px 2px 4px rgb(114, 114, 114);
+}
+
+.swiper-pagination {
+    position: initial;
+    margin: 1em 0;
+
+}
+
+@media (min-width: 1024px) {
+    
+}
