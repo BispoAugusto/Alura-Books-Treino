@@ -6,7 +6,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1em;
+    padding: 0em 1em;
+    height: 61px;
     position: relative;
 }
 
@@ -65,4 +66,61 @@
 
 .container__botao {
     display: none;
+}
+
+.desktop {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    .cabecalho {
+        padding: 0 5em;
+    }
+
+    .container__titulo {
+        font-size: 30px;
+        font-family: var(--font-h1);
+    }
+
+    .container__titulo--negrito {
+        font-weight: 700;
+    }
+
+    .cabecalho__opcoes {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .opcoes__item {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: var(--azul);
+        padding: 1.3em 1em;
+    }
+
+    .opcoes__item:hover {
+        cursor: pointer;
+    }
+    
+
+    .opcoes__link {
+        text-decoration: none;
+        color: var(--azul);
+    }
+
+    .cabecalho__opcoes {
+        position: relative;
+    }
+
+    .lista-menu {
+        width: 60%;
+    }
 }

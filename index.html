@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="cabecalho">
         <div class="container">
             <input type="checkbox" id="menu" class="container__botao">
             <label for="menu">
-                <span class="cabecalho__menu-hamburguer container__img"></span>
+                <span class="cabecalho__menu-hamburguer container__img mobile"></span>
             </label>
             <ul class="lista-menu">
                 <li class="lista-menu__titulo">Categorias</li>
@@ -27,12 +27,28 @@
                 <li class="lista-menu__item"><a href="#" class="lista-menu__link">Business</a></li>
                 <li class="lista-menu__item"><a href="#" class="lista-menu__link">Desing & UX</a></li>
             </ul>
-            <a href="#"><img src="assets/Logo.svg" alt="Logo Alura Books" class="container__img"></a>
+            <img src="assets/Logo.svg" alt="Logo Alura Books" class="container__img">
+            <h1 class="container__titulo desktop"><b class="container__titulo--negrito">Alura</b>Books</h1>
         </div>
+        <ul class="cabecalho__opcoes desktop">
+            <input type="checkbox" id="menu__opcoes" class="container__botao">
+            <label for="menu__opcoes">
+                <li class="opcoes__item lista-menu__link">Categorias</li>
+            </label>
+            <ul class="lista-menu">
+                <li class="lista-menu__item"><a href="#" class="lista-menu__link">Programação</a></li>
+                <li class="lista-menu__item"><a href="#" class="lista-menu__link">Front-End</a></li>
+                <li class="lista-menu__item"><a href="#" class="lista-menu__link">Infraestrutural</a></li>
+                <li class="lista-menu__item"><a href="#" class="lista-menu__link">Business</a></li>
+                <li class="lista-menu__item"><a href="#" class="lista-menu__link">Desing & UX</a></li>
+            </ul>
+            <li class="opcoes__item"><a href="#" class="opcoes__link">Favoritos</a></li>
+            <li class="opcoes__item"><a href="#" class="opcoes__link">Minha estante</a></li>
+        </ul>
         <div class="container">
-            <a href="#"><img src="assets/Favoritos.svg" alt="Favoritos" class="container__img"></a>
-            <a href="#"><img src="assets/Sacola.svg" alt="Sacola de Compras" class="container__img"></a>
-            <a href="#"><img src="assets/Usuario.svg" alt="Perfil" class="container__img"></a>
+            <a href="#" class="container__img mobile"><img src="assets/Favoritos.svg" alt="Favoritos"></a></li>
+            <a href="#" class="container__img"><img src="assets/Sacola.svg" alt="Sacola de Compras" ></a></li>
+            <a href="#" class="container__img"><img src="assets/Usuario.svg" alt="Perfil"></a></li>
         </div>
     </header>
     <section class="banner">
@@ -135,7 +151,7 @@
     <section class="contatos">
         <h2 class="contatos-titulo">Fique por dentro das novidades!</h2>
         <p class="contatos-texto">Atualizações de e-books, novos livros, promoções e outros.</p>
-        <input type="search" class="contatos-email" placeholder="Cadastre seu e-mail">
+        <input type="email" class="contatos-email" placeholder="Cadastre seu e-mail">
     </section>
     <footer class="rodape">
         <p class="rodape-texto">Grupo Alura</p>
@@ -145,7 +161,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper('.swiper', {
-            speed: 500,
+            speed: 1000,
             spaceBetween: 10,
             slidesPerView: 3,
             pagination: {
@@ -153,16 +169,14 @@
             },
             loop: true,
             keyboard: true,
-
-             breakpoints: {
-            // quando a largura da janela for >= 320px
-            768: {
-                slidesPerView: 4,
-                spaceBetween: 20,
+            autoplay: {
+                delay: 3000,
             },
-            1024: {
-                slidesPerView: 5,
-        }
+            breakpoints: {
+            // quando a largura da janela for >= 320px
+             1024: {
+                spaceBetween:60,
+            }
     }
 });
     </script>
