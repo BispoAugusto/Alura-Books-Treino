@@ -1,0 +1,14 @@
+.tablet {
+    display: none;
+}
+
+.desktop {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .mobile {
+        display: none;
+    }
+    
+}

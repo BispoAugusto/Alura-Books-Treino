@@ -68,16 +68,9 @@
     display: none;
 }
 
-.desktop {
-    display: none;
-}
-
 @media screen and (min-width: 1024px) {
-    .mobile {
-        display: none;
-    }
 
-    .desktop {
+    .tablet {
         display: block;
     }
 
@@ -117,10 +110,36 @@
     }
 
     .cabecalho__opcoes {
+        display: flex;
         position: relative;
     }
 
     .lista-menu {
         width: 60%;
+    }
+
+    .menu__opcoes:checked~.menu__opcoes > .opcoes__item {
+        background: var(--azul-degrade);
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .container__img {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .container__texto {
+        color: var(--azul);
+        padding-left: 0.5em;
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
     }
 }

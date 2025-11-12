@@ -31,3 +31,32 @@
     padding: 1em 1.5em;
     display: block;
 }
+
+@media screen and (min-width: 1024px) {
+    .topicos-titulo {
+        font-size: 24px;
+    }
+
+    .topicos-lista {
+        gap: 1em;
+        padding: 0em 6em 2em 6em;
+    }
+
+    .lista-link__link {
+        padding: 1em 1.75em;
+        font-size: 24px;
+        font-weight: 600;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .topicos-titulo {
+        font-size: 32px;
+        padding: 2em 0 1.5em 0;
+    }
+
+    .topicos-lista {
+        padding: 0em 25em 3em 25em;
+        gap: 1em;
+    }
+}
